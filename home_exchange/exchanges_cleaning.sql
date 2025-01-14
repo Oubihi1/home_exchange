@@ -1,8 +1,4 @@
 
-{{ config(
-    materialized='table',
-
-) }}
 
 WITH cleaned_exchanges AS (
     SELECT
