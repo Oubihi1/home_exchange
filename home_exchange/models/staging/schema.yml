@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: exchanges_cleaning
+    +store_failures: true
+    columns:
+      - name: conversation_id
+        tests:
+          - unique
+          - not_null
+
+
+      - name: start_on
+        tests:
+          - not_null
+
+      - name: end_on
+        tests:
+          - not_null
+
+      - name: exchange_type
+        tests:
+          - accepted_values:
+              values: ['RECIPROCAL', 'NON_RECIPROCAL']
